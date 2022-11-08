@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewData["Title"] = "CarbonAbsorption";
+}
+
+<div class="d-flex justify-content-center pt-4">
+    <div class="card text-white bg-danger" style="width: 12rem;">
+        <div class="card-body text-center" style="padding: 0.25rem;">
+            <p class="card-text"><i class="fa fa-calendar"></i> Bulan-Tahun</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <h2>Hai, User_login</h2>
+    <h3>Hitung emisi <span id="subtext">serapan karbon</span> kamu</h3>
+</div>
+
+<nav>
+    <div class="nav nav-tabs nav-pills nav-justified flex-sm-row" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link disabled" id="nav-rumah-tab" href="#nav-rumah" role="tab" aria-controls="nav-rumah" aria-selected="true" idSpan="1" spanName="di tempat tinggal"><i class="fa fa-house"></i> Rumah</a>
+        <a class="nav-item nav-link disabled" id="nav-kendaraan-tab" href="#nav-kendaraan" role="tab" aria-controls="nav-kendaraan" aria-selected="false" idSpan="1" spanName="kendaraan"><i class="fa fa-car"></i> Kendaraan</a>
+        <a class="nav-item nav-link active" id="nav-serapan-tab" data-toggle="tab" href="#nav-serapan" role="tab" aria-controls="nav-serapan" aria-selected="false" idSpan="1" spanName="serapan karbon"><i class="fa fa-tree"></i> Serapan Karbon</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+
+    @*tempat tinggal*@
+    <div class="tab-pane fade" id="nav-rumah" role="tabpanel" aria-labelledby="nav-rumah-tab"></div>
+
+    @*kendaraan*@
+    <div class="tab-pane fade" id="nav-kendaraan" role="tabpanel" aria-labelledby="nav-kendaraan-tab"></div>
+
+    @*serapan karbon*@
+    <div class="tab-pane fade show active" id="nav-serapan" role="tabpanel" aria-labelledby="nav-serapan-tab">
+        <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative">
+            @*<div class="input-group">
+                <label>show</label>
+                <select class="form-control">
+                    <option value="" selected disabled> Kategori Kendaraan</option>
+                    <option hidden>Pilih</option>
+                    <option value="value1">10</option>
+                    <option value="value2">n+</option>
+                </select>
+                <input class="form-control" type="search" name="name" value="Search here" />
+            </div>*@
+
+            <form action="/" method="post" class="form-inline justify-content-center mb-4">
+                <label class="mr-sm-1">Show </label>
+                <select class="form-control">
+                    @*<option value="" selected disabled> Kategori Kendaraan</option>*@
+                    <option hidden>Pilih</option>
+                    <option value="value1">10</option>
+                    <option value="value2">n+</option>
+                </select>
+                <label class="ml-sm-1">Entries</label>
+                <input class="ml-sm-5 form-control" type="search" value="" placeholder="Search here" />
+            </form>
+            
+            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-3">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/other/assets/img/rambutan.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                Pohon Rambutan
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/other/assets/img/durian.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                Pohon Durian
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="/other/assets/img/beringin.jpg" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <div class="clearfix mb-3">
+                                <h5 class="card-title text-center">
+                                    Pohon Beringin
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

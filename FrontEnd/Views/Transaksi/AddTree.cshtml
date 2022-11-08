@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "AddTree";
+}
+
+<div class="d-flex justify-content-center pt-4">
+    <div class="card text-white bg-danger" style="width: 12rem;">
+        <div class="card-body text-center" style="padding: 0.25rem;">
+            <p class="card-text"><i class="fa fa-calendar"></i> Bulan-Tahun</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <h2>Hai, User_login</h2>
+    <h3>Hitung emisi serapan karbon kamu</h3>
+</div>
+
+<nav>
+    <div class="nav nav-tabs nav-pills nav-justified flex-sm-row" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link disabled" id="nav-rumah-tab" href="#nav-rumah" role="tab" aria-controls="nav-rumah" aria-selected="true"><i class="fa fa-house"></i> Rumah</a>
+        <a class="nav-item nav-link disabled" id="nav-kendaraan-tab" href="#nav-kendaraan" role="tab" aria-controls="nav-kendaraan" aria-selected="false"><i class="fa fa-car"></i> Kendaraan</a>
+        <a class="nav-item nav-link active" id="nav-serapan-tab" data-toggle="tab" href="#nav-serapan" role="tab" aria-controls="nav-serapan" aria-selected="false"><i class="fa fa-tree"></i> Serapan Karbon</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+
+    @*tempat tinggal*@
+    <div class="tab-pane fade" id="nav-rumah" role="tabpanel" aria-labelledby="nav-rumah-tab"></div>
+
+    @*kendaraan*@
+    <div class="tab-pane fade" id="nav-kendaraan" role="tabpanel" aria-labelledby="nav-kendaraan-tab"></div>
+
+    @*serapan karbon*@
+<div class="tab-pane fade show active" id="nav-serapan" role="tabpanel" aria-labelledby="nav-serapan-tab">
+    <div class="d-flex justify-content-center" style="margin-top: 50px">
+        <form action="/" method="post">
+            <div class="form-group">
+                <label>Jenis Pohon</label>
+                <div class="input-group">
+                    <input class="form-control" type="text" name="name" value="" disabled />
+                    <span class="input-group-append">
+                        <a href="#" class="btn btn-outline-secondary border-left-0 border">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Umur Pohon (Tahun)</label>
+                <div class="input-group">
+                    <input class="form-control" type="number" name="name" value="" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Jumlah Ditanam</label>
+                <div class="input-group">
+                    <input class="form-control" type="number" name="name" value="" />
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
+                <div class="text-right">
+                    <input class="btn btn-primary" type="submit" name="Submit" value="Simpan" />
+                    @*<input class="btn btn-danger" type="reset" name="Reset" value="Batal" />*@
+                    <a class="btn btn-light" asp-action="Index">Kembali</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

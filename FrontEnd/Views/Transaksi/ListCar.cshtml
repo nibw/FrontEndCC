@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewData["Title"] = "Car";
+}
+
+
+<div class="d-flex justify-content-center pt-4">
+    <div class="card text-white bg-danger" style="width: 12rem;">
+        <div class="card-body text-center" style="padding: 0.25rem;">
+            <p class="card-text"><i class="fa fa-calendar"></i> Bulan-Tahun</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <h2>Hai, User_login</h2>
+    <h3>Hitung emisi karbon kendaraan kamu</h3>
+</div>
+
+<nav>
+    <div class="nav nav-tabs nav-pills nav-justified flex-sm-row" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link disabled" id="nav-rumah-tab" data-toggle="tab" href="#nav-rumah" role="tab" aria-controls="nav-rumah" aria-selected="true"><i class="fa fa-house"></i> Rumah</a>
+        <a class="nav-item nav-link active" id="nav-kendaraan-tab" data-toggle="tab" href="#nav-kendaraan" role="tab" aria-controls="nav-kendaraan" aria-selected="false"><i class="fa fa-car"></i> Kendaraan</a>
+        <a class="nav-item nav-link disabled" id="nav-serapan-tab" data-toggle="tab" href="#nav-serapan" role="tab" aria-controls="nav-serapan" aria-selected="false"><i class="fa fa-tree"></i> Serapan Karbon</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    
+    @*tempat tinggal*@
+    <div class="tab-pane fade" id="nav-rumah" role="tabpanel" aria-labelledby="nav-rumah-tab">
+        <div class="row" style="margin-top: 150px">
+            <div class="col-md-12">
+                <form action="/" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Jumlah orang dalam rumah</label>
+                                <input class="form-control" type="number" name="name" value="" placeholder="Input here" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Konsumsi gas LPG bulan ini (KG)</label>
+                                <input class="form-control" type="number" name="name" value="" placeholder="Input here" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>JStandmeter listrik bulan ini (kWh)</label>
+                                <input class="form-control" type="number" name="name" value="" placeholder="Input here" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Konsumsi Gas Kota Bulan ini (M3)</label>
+                                <input class="form-control" type="number" name="name" value="" placeholder="Input here" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col text-center">
+                            <input class="btn btn-primary" type="submit" name="Submit" value="Kalkulasi" />
+                            <input class="btn btn-danger" type="reset" name="Reset" value="Clear" />
+                            <input class="btn btn-secondary" type="submit" name="Back" value="Back" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+    @*kendaraan*@
+    <div class="tab-pane fade show active" id="nav-kendaraan" role="tabpanel" aria-labelledby="nav-kendaraan-tab">
+        <div class="pt-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-darat-tab" data-toggle="tab" href="#nav-darat" role="tab" aria-controls="nav-darat" aria-selected="true"><i class="fa fa-car"></i> Darat</a>
+                            @*<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa fa-motorcycle"></i> Motor</a>*@
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+
+                        @*mobil*@
+                        <div class="tab-pane fade show active" id="nav-darat" role="tabpanel" aria-labelledby="nav-darat-tab">
+                            <div class="form-group pt-3">
+                                <select class="form-control input-group-sm exclude">
+                                    @*<option value="" selected disabled> Kategori Kendaraan</option>*@
+                                    <option hidden>Tipe kendaraan</option>
+                                    <option value="value1">Mobil</option>
+                                    <option value="value2">Motor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    @*<option value="" selected disabled> Kategori Kendaraan</option>*@
+                                    <option hidden>Kategori Kendaraan</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    @*<option value="" selected disabled> Kategori Kendaraan</option>*@
+                                    <option hidden>Jenis BBM</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    @*<option value="" selected disabled> Kategori Kendaraan</option>*@
+                                    <option hidden>Kapasitas Mesin</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    @*<option value="" selected disabled> Kategori Kendaraan</option>*@
+                                    <option hidden>Jumlah Halaman</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="search" name="name" value="" placeholder="Search here" />
+                            </div>
+                            <div class="form-group">
+                                <div class="text-center">
+                                    @*<input class="btn btn-primary" type="submit" name="Submit" value="Submit" />
+                <input class="btn btn-danger" type="reset" name="Reset" value="Clear" />*@
+                                    @*<input class="btn btn-secondary btn-block" type="submit" name="Back" value="Kembali" />*@
+                                    <a class="btn btn-secondary btn-block" asp-action="Index">Kembali</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*motor*@
+                        @*<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="form-group pt-3">
+                                <select class="form-control input-group-sm exclude">
+                                    <option value="" selected disabled> Kategori Kendaraan</option>
+                                    <option hidden>Kategori Kendaraan</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    <option value="" selected disabled> Kategori Kendaraan</option>
+                                    <option hidden>Jenis BBM</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    <option value="" selected disabled> Kategori Kendaraan</option>
+                                    <option hidden>Kapasitas Mesin</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control input-group-sm exclude">
+                                    <option value="" selected disabled> Kategori Kendaraan</option>
+                                    <option hidden>Jumlah Halaman</option>
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2">Value n-2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="search" name="name" value="" placeholder="Search here" />
+                            </div>
+                            <div class="form-group">
+                                <div class="text-center">
+                                    <input class="btn btn-primary" type="submit" name="Submit" value="Submit" />
+                            <input class="btn btn-danger" type="reset" name="Reset" value="Clear" />
+                                    <input class="btn btn-secondary btn-block" type="submit" name="Back" value="Kembali" />
+                                </div>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative">
+                        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-3">
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="/other/assets/img/Surpra.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">
+                                            Honda Supra
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="/other/assets/img/C70.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">
+                                            Honda C70
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="/other/assets/img/Win 2005.jpg" class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <div class="clearfix mb-3">
+                                            <h5 class="card-title text-center">
+                                                Honda WIN 2005
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*serapan karbon*@
+    <div class="tab-pane fade" id="nav-serapan" role="tabpanel" aria-labelledby="nav-serapan-tab">ini pohon</div>
+</div>
